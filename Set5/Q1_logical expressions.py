@@ -26,3 +26,4 @@ propositions = {
 
 # Run evaluation
 evaluate_expressions(propositions)
+

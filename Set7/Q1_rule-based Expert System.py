@@ -21,3 +21,5 @@ user_symptoms = ["fever", "cough"]
 
 result = diagnose(user_symptoms)
 print("Diagnosis:", result)
+
+

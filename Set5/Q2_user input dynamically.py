@@ -6,11 +6,6 @@ def implies(p, q):
 def iff(p, q):
     return (p and q) or (not p and not q)
 
-# Accept user input for propositions
-propositions = {}
-for var in ['A', 'B', 'C']:
-    val = input(f"Enter truth value for {var} (True/False): ")
-    propositions[var] = val.strip().lower() == 'true'
 
 # Evaluate expressions dynamically
 def evaluate_expressions(props):
@@ -20,6 +15,12 @@ def evaluate_expressions(props):
     print("¬B ∨ A =", (not props['B']) or props['A'])
     print("A → C =", implies(props['A'], props['C']))
     print("B ↔ C =", iff(props['B'], props['C']))
+
+# Accept user input for propositions
+propositions = {}
+for var in ['A', 'B', 'C']:
+    val = input(f"Enter truth value for {var} (True/False): ")
+    propositions[var] = val.strip().lower() == 'true'
 
 # Run evaluation
 evaluate_expressions(propositions)
