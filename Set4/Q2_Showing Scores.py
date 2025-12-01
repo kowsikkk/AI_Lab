@@ -40,8 +40,14 @@ def minimax(board, is_maximizing):
         return best
 
 
+# ' ', 'X', 'O', ' ', ' ', 'X', ' ', 'O', ' '
+board = []
+for i in range(9):
+    val=input("Enter the X or O or nothing :").split()
+    board.append(val[0]) if val else board.append(' ')
 
-board = [' ', 'X', 'O', ' ', ' ', 'X', ' ', 'O', ' ']  # Example state
+
+print(board)
 
 print("\nPossible moves and minimax scores:")
 for i in range(9):
