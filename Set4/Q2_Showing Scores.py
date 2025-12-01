@@ -1,3 +1,11 @@
+def print_board(board):
+    print(f"{board[0]} | {board[1]} | {board[2]}")
+    print("--+---+--")
+    print(f"{board[3]} | {board[4]} | {board[5]}")
+    print("--+---+--")
+    print(f"{board[6]} | {board[7]} | {board[8]}")
+    print()
+
 def check_winner(board, player):
     win_conditions = [
         (0, 1, 2), (3, 4, 5), (6, 7, 8),  # rows
@@ -47,7 +55,7 @@ for i in range(9):
     board.append(val[0]) if val else board.append(' ')
 
 
-print(board)
+print_board(board)
 
 print("\nPossible moves and minimax scores:")
 for i in range(9):
